@@ -1,14 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve()
-{
-    // Code here
-    
-
-    return;
-}
-
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -16,12 +8,8 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
 
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
+    // Code here
+    
 
     return 0;
 }
