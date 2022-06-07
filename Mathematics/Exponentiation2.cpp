@@ -41,9 +41,9 @@ int binExp(int a , int b){
 void solve()
 {
     // Code here
-    int a,b;
-    cin>>a>>b;
-    cout<<binExp(a,b);
+    int a,b,c;
+    cin>>a>>b>>c;
+    cout<<binExp(a,binExp(b,c))<<endl;
 
     return;
 }
