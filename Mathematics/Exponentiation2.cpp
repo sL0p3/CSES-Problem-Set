@@ -27,12 +27,12 @@ typedef map<char, int> mci;
 #define alla(arr, sz) arr, arr + sz
 const int M = 1e9 + 7;
 
-int binExp(int a , int b){
+int binExp(int a , int b,int m){
     int ans = 1;
     while(b){
         if (b&1)
-            ans = (ans*1LL*a)%M;
-        a = (a*1LL*a)%M;
+            ans = (ans*1LL*a)%m;
+        a = (a*1LL*a)%m;
         b>>= 1;
     }
     return ans ;
@@ -43,7 +43,7 @@ void solve()
     // Code here
     int a,b,c;
     cin>>a>>b>>c;
-    cout<<binExp(a,binExp(b,c))<<endl;
+    cout<<binExp(a,binExp(b,c,M-1),M)<<endl;
 
     return;
 }
