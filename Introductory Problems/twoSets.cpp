@@ -39,14 +39,14 @@ int main()
     cout.tie(0);
 
     // Code here
-    int n;
+    ll n;
     cin>>n;
-    int nn = (n*(n+1))/2; 
+    ll nn = (n*(n+1))/2; 
     if(nn%2) cout<<"NO"<<endl;
     else{
         cout<<"YES"<<endl;
-        int mid = nn/2;
-        vi v1,v2;
+        ll mid = nn/2;
+        vll v1,v2;
         for(int i= n;i>0;i--){
             if(i<= mid){
                 v1.pb(i);
