@@ -30,7 +30,8 @@ int main()
 
     // Code here
     int n, m, k;
-    vi app, apr;
+    cin >> n >> m >> k;
+    vi app(n), apr(m);
     for (int i = 0; i < n; i++)
     {
         cin >> app[i];
@@ -44,15 +45,18 @@ int main()
 
     int i = 0, j = 0, ans = 0;
 
-    while (i < n)
+    while (i < n && j < m)
     {
-        while (j < m && apr[i] < app[i] - k)
+        if (abs(app[i] - apr[j]) <= k)
         {
+            ans++;
+            i++;
             j++;
-            if (abs(apr[i] - app[i]) <= k)
+        }
+        else
+        {
+            if (app[i] - apr[j] > k)
             {
-                ans++;
-                i++;
                 j++;
             }
             else
@@ -61,7 +65,6 @@ int main()
             }
         }
     }
-
     cout << ans << endl;
 
     return 0;
