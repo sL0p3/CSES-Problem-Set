@@ -35,7 +35,7 @@ int main()
         cin >> v[i];
     }
     sort(all(v));
-    int i = 0, j = n - 1, ans;
+    int i = 0, j = n - 1, ans = 0;
     while (i <= j)
     {
         if (v[i] + v[j] > x)
