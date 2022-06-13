@@ -42,6 +42,7 @@ int main()
             j--;
         else
         {
+            ans++;
             i++;
             j--;
         }
