@@ -27,6 +27,26 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
+    int n, x;
+    cin >> n >> x;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
+    sort(all(v));
+    int i = 0, j = n - 1, ans;
+    while (i <= j)
+    {
+        if (v[i] + v[j] > x)
+            j--;
+        else
+        {
+            i++;
+            j--;
+        }
+    }
+    cout << ans << endl;
 
     // Code here
 
