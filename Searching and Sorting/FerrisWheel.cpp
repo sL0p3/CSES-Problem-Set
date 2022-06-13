@@ -42,10 +42,10 @@ int main()
             j--;
         else
         {
-            ans++;
             i++;
             j--;
         }
+        ans++;
     }
     cout << ans << endl;
 
