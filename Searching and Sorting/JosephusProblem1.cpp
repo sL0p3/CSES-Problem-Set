@@ -70,7 +70,6 @@ vector<int> ans;
 void solve(int k , int i , vector<int>&arr){
     if(arr.size()== 1){
         ans.pb(arr[0]);
-        debug(ans)
         return ;
     }
     i = (i+k) % arr.size() ;
@@ -81,10 +80,11 @@ void solve(int k , int i , vector<int>&arr){
 
 vector<int> josephus(int n, int k){
     vi arr;
+    k--;
     for(int i= 0 ;i<n;i++){
         arr.pb(i+1);
     }
-    solve(k--,0,arr);
+    solve(k,0,arr);
     return ans;
 }
 
@@ -93,7 +93,9 @@ void solve() {
     int n;
     cin>>n;
     auto anss = josephus(n,2);
-
+    for(auto &it: anss){
+        cout<<it<<" ";
+    }cout<<endl;
 
     return;
 }
@@ -107,11 +109,8 @@ int main() {
 #endif
 
     fastio();
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+
+    solve();
 
     return 0;
 }
