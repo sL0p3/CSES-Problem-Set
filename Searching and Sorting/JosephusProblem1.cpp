@@ -110,8 +110,19 @@ int main() {
 
     fastio();
 
-    solve();
-
+    // solve();
+    int n;
+    cin>>n;
+    vi arr;
+    for(int i = 0 ;i<n;i++){
+        arr.pb(i+1);
+    }
+    int index = 0 ;
+    while(arr.size() > 0 ){
+        index = (index + 1) % arr.size();
+        cout<<arr[index]<<" ";
+        arr.erase(arr.begin() + index);
+    }
     return 0;
 }
 
